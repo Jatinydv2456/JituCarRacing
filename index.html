@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="Play Turbo Racer, a free 2D car racing game.">
+  <title>Turbo Racer - Car Racing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">ARCADE RACING</p>
+        <h1>🏎️ TURBO RACER</h1>
+      </div>
+      <div class="best-box">
+        <span>BEST SCORE</span>
+        <strong id="bestScore">0</strong>
+      </div>
+    </header>
+
+    <section class="hud">
+      <div class="stat">
+        <span>SCORE</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>COINS</span>
+        <strong id="coins">0</strong>
+      </div>
+      <div class="stat">
+        <span>SPEED</span>
+        <strong id="speed">0</strong>
+      </div>
+    </section>
+
+    <div class="track-wrap">
+      <canvas id="gameCanvas" aria-label="Turbo Racer game">
+        Your browser does not support canvas.
+      </canvas>
+
+      <div id="startScreen" class="overlay">
+        <div class="dialog">
+          <div class="big-icon">🏁</div>
+          <h2>Ready to Race?</h2>
+          <p>Dodge traffic, collect coins and beat your high score!</p>
+          <button id="startBtn" class="primary-btn">START RACE ▶</button>
+          <small>Use ← → or A / D to steer</small>
+        </div>
+      </div>
+
+      <div id="gameOverScreen" class="overlay hidden">
+        <div class="dialog">
+          <div class="big-icon">💥</div>
+          <h2>RACE OVER!</h2>
+          <p>Your score: <strong id="finalScore">0</strong></p>
+          <p>Coins collected: <strong id="finalCoins">0</strong></p>
+          <button id="restartBtn" class="primary-btn">RACE AGAIN ↻</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="leftBtn" class="control-btn" aria-label="Steer left">◀</button>
+      <p>AVOID CARS · COLLECT COINS</p>
+      <button id="rightBtn" class="control-btn" aria-label="Steer right">▶</button>
+    </div>
+
+    <footer>Turbo Racer · Made for speed ⚡</footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
